@@ -54,7 +54,10 @@ To get this to compile you will need to download Derek Barnett's bamtools API an
 
 Edit the Makefile
 
-Then, after you install it, YOU NEED TO EDIT THE Makefile in this folder so that everywhere it says "FolderWhereBamToolsIs" you put in the folder where bamtools is located.
+Then, after you install it, YOU NEED TO EDIT THE Makefile in this folder so that everywhere it says "FolderWhereBamToolsIs" you put in the folder where bamtools is located on these lines:
+LIBS= -L/FolderWhereBamToolsIs/bamtools/lib -lbamtools -lz
+LDFLAGS = -Wl,-rpath /FolderWhereBamToolsIs/bamtools/lib
+INCLUDES = -I/FolderWhereBamToolsIs/bamtools/include
 
 Compiling
 
