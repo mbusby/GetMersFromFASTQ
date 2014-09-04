@@ -15,9 +15,9 @@ BUILT_OBJECTS= $(patsubst %,$(OBJ_DIR)/%,$(OBJECTS))
 CXX= g++
 CXXFLAGS= -Wall -O2
 PROG= GetMersFastq
-LIBS= -L/seq/mbrd/mbusby/Software/bamtools/lib -lbamtools -lz
-LDFLAGS = -Wl,-rpath /seq/mbrd/mbusby/Software/bamtools/lib
-INCLUDES = -I/seq/mbrd/mbusby/Software/bamtools/include
+LIBS= -L/FolderWhereBamToolsIs/bamtools/lib -lbamtools -lz
+LDFLAGS = -Wl,-rpath /FolderWhereBamToolsIs/bamtools/lib
+INCLUDES = -I/FolderWhereBamToolsIs/bamtools/include
 
 # ================
 # build targets
