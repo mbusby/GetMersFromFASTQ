@@ -65,3 +65,6 @@ INCLUDES = -I/FolderWhereBamToolsIs/bamtools/include
 Compiling
 
 Go to the folder where everything is installed in type "make". Ignore the warnings about Handy doing stupid stuff. If nothing says ERROR and it makes an executable called ComplexityByStartPos you should be all set.
+
+License
+Anyone can use this.
