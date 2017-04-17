@@ -38,33 +38,14 @@ This utility should work for any fastq file though it may crash if you don't run
 
 INSTALLATION
 
-This is likely to be a pain in the neck.
-
-Installation: The file GetMersFromFASTQ is a 64 bit Unix binary. This is easiest if it works on your server. Otherwise you will need to compile it.
-
-How to get it to compile:
-
-Compiling the file may or may not be a big hassle because you need bamtools.
-
-First, though, copy all the files in here to a single directory on your unix server. The server should have g++ is installed (it probably is).
-
-Bamtools
-
-To get this to compile you will need to download Derek Barnett's bamtools API and install it in a folder somewhere. It is here: https://github.com/pezmaster31/bamtools You need the API, not the command line program though is quite useful to have. 
-
-Edit the Makefile
-
-Then, after you install it, YOU NEED TO EDIT THE Makefile in this folder so that everywhere it says "FolderWhereBamToolsIs" you put in the folder where bamtools is located on these lines:
-
-LIBS= -L/FolderWhereBamToolsIs/bamtools/lib -lbamtools -lz
-
-LDFLAGS = -Wl,-rpath /FolderWhereBamToolsIs/bamtools/lib
-
-INCLUDES = -I/FolderWhereBamToolsIs/bamtools/include
-
 Compiling
 
-Go to the folder where everything is installed in type "make". Ignore the warnings about Handy doing stupid stuff. If nothing says ERROR and it makes an executable called ComplexityByStartPos you should be all set.
+Go to the folder where everything is installed.
+
+Type:
+g++ Main.cpp Handy.cpp -o GetMersFastq
+
+
 
 License
 Anyone can use this.
