@@ -27,10 +27,10 @@ INCLUDES = -I/FolderWhereBamToolsIs/bamtools/include
 all: $(OBJ_DIR) $(PROG)
 
 $(BUILT_OBJECTS): $(SOURCES)
-	@$(CXX) -c -o $@ $(*F).cpp $(LDFLAGS) $(CXXFLAGS) $(INCLUDES)
+	@$(CXX) -c -o $@ $(*F).cpp $(CXXFLAGS) 
    
 GetMersFastq: $(BUILT_OBJECTS)
-	@$(CXX) $(LDFLAGS) $(CXXFLAGS) -o GetMersFastq $(BUILT_OBJECTS) $(LIBS)
+	@$(CXX) $(CXXFLAGS) -o GetMersFastq $(BUILT_OBJECTS) 
 
 $(OBJ_DIR):
 	@mkdir -p $@
